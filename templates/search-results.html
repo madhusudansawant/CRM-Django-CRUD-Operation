@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if results %}
+    <h2>Search Results For {{query}}</h2>
+    <table class="table">
+      <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">State</th>
+            <th scope="col">Country</th>
+            <th scope="col">Date Joined</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in results %}
+          <tr>
+            <td>{{item.id}}</td>                
+            <td> {{item.first_name}} {{item.last_name}}</td>
+            <td> {{item.email}}</td>
+            <td> {{item.phone}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.state}}</td>
+            <td>{{item.country}}</td>
+            <td>{{item.creation_date}}</td>
+
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No results found.</p>
+  {% endif %}
+{% endblock %}

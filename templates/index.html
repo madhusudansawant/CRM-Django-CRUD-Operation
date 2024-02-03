@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    {% block content %}
+    <body>
+     <br>
+     <br>
+     <div class="text-center">
+        <h3>CRM... Management at it's finest! </h3>
+        <br>
+        <h5>Keep track of your records effectively! </h5>
+        <hr>
+        <br>
+        <a class="btn btn-primary" typ="button" href="{% url 'register' %}"> Create your account</a>
+     </div>
+     
+    </body>
+
+
+    {% endblock %}
+</html>
